@@ -6,7 +6,6 @@ int main() {
     scanf("%d", &n);
     unsigned arr1[31] = {0}; 
     char choice[100];
-    //fgets(choice,100,stdin);
 
     int len1 = sizeof(arr1) / sizeof(arr1[0]);
     printf("Binary forme :");
