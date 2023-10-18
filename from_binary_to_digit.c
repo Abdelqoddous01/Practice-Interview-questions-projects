@@ -2,14 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-int s(int n,int a,int b, int c){
-    while (n>3)
-    {
-       return n+(n-1);
-    }
-}
-
 int main() {
-    printf("%d",s(5,1,2,3));
+    char n[32];
+    scanf("%s", &n);
+    long res =strtol(n,NULL,2);
+    printf("%ld",res);
     return 0;
 }
