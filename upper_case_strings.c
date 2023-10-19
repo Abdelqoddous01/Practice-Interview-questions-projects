@@ -15,5 +15,5 @@ int main(){
     {
         printf("%c",up[i]);
     }
-    
+    return 0;
 }
