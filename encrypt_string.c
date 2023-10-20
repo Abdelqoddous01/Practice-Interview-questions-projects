@@ -1,25 +1,21 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdint.h>
-#include <ctype.h>
 
-int main(){
-    char message[100];
-    printf("Enter message :");
-    fgets(message,100,stdin);
-    int len=strlen(message)-1;
-    for (int i = 0; i < len; i++){
-        if (isalpha(message[i]))
+
+int main(void){
+    char s[100];
+    fgets(s,100,stdin);
+    for (int i = 0; i < strlen(s); i++)
+    {
+        if (s[i]>='a' && s[i]<='z')
         {
-            if (message[i]+3<='z')
-            {
-                message[i]=message[i]+3;
-            }
+            s[i]='a'+(s[i]-'a'+3)%26;
         }
-        else if(isdigit(message[i])){
-            message[i]=message[i]+4;
+        else if(s[i]>='A' && s[i]<='Z'){
+            s[i]='A'+(s[i]-'A'+3)%26;
         }
     }
-    printf("The encrypted message is : %s",message);
+        
+    printf("The encrypted message : %s",s);
     return 0;
 }
